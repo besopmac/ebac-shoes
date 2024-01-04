@@ -1,0 +1,167 @@
+body {
+  background-color: #f9f9f9;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  display: flex;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+header {
+  color: #fff;
+  padding: 28px;
+  background-color: #0067da;
+}
+
+header h1 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+header .container {
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul {
+  gap: 16px;
+  display: flex;
+  align-items: center;  
+}
+
+nav ul a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#sobre .container,
+#produtos .container {
+  margin: 28px;
+  padding: 28px;
+  background-color: #fff;
+}
+
+#sobre .container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+#sobre .container img {
+  width: 100%;
+  height: auto;
+}
+
+.content {
+  flex: 1;
+  padding: 28px 0;
+}
+
+.content h2 {
+  color: #0067da;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.content p {
+  line-height: 1.75;
+}
+
+#produtos .container {
+  display: flex;
+  flex-direction: column;
+}
+
+#produtos h3 {
+  color: #0067da;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.card-grid {
+  gap: 28px;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: space-between;
+}
+
+.card {
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.card h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.card p {
+  font-size: .9rem;
+  line-height: 1.5;
+}
+
+.card a {
+  color: #fff;
+  margin-top: auto;
+  font-weight: 700;
+  line-height: 48px;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #0067da;
+}
+
+.card + .card {
+  margin-top: 28px;
+}
+
+@media (min-width: 640px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card + .card {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  header {
+    padding: 28px 0;
+  }
+
+  .container {
+    max-width: calc(1140px);
+  }
+
+  #sobre .container,
+  #produtos .container {
+    padding: 28px;
+    margin: 28px auto;
+    background-color: #fff;
+    max-width: calc(1140px - 52px);
+  }
+
+  #sobre .container {
+    gap: 28px;
+    display: flex;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
